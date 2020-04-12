@@ -1,0 +1,19 @@
+select b.id, b.name, b.author, b.categoryid,
+       b.editorid, b.statusid,
+       c.display "categoryname",
+       e.display "editorname",
+       s.display "statusname"
+  from tbook b
+  join tcatalog c on c.value= b.categoryid
+  join tcatalog e on e.value = b.editorid
+  join tcatalog s on s.value = b.statusid
+  order by b.id;
+
+select r.id, r.bookid, r.user, r.start, r.end,
+       r.statusid,
+       b.name "bookname",
+       s.display "statusname"
+  from treservation r
+  join tbook b on b.id = r.bookid
+  join tcatalog s on s.value = r.statusid
+  order by r.id;
