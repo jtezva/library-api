@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/libraryapi/utils/requires.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/library-api/utils/requires.php');
 $con = false;
 try {
     //validate GET
