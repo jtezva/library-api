@@ -12,6 +12,7 @@ try {
     
     $message = BookService::deleteBook($id);
     RespHandler::handleSuccess(null, $message, 200);
+    echo "Hola mundo";
 } catch (Exception $e) {
     RespHandler::handleError($e, $con);
 }
